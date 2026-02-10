@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hire Staff | Staffnexa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Hire Staff</h1>
+    <p class="subtitle">Tell us your manpower requirement and we’ll get back to you.</p>
+
+    <form id="clientEnquiryForm">
+
+      <label>Company Name *</label>
+      <input type="text" name="companyName" required />
+
+      <label>Contact Person *</label>
+      <input type="text" name="contactPerson" required />
+
+      <label>Phone Number *</label>
+      <input type="tel" name="phone" required pattern="[0-9]{10}" />
+
+      <label>Email *</label>
+      <input type="email" name="email" required />
+
+      <label>Requirement Type *</label>
+      <input type="text" name="requirementType" placeholder="e.g. Housekeeping, Security" required />
+
+      <label>Number of Staff *</label>
+      <input type="number" name="numberOfStaff" required min="1" />
+
+      <label>Location *</label>
+      <input type="text" name="location" required />
+
+      <label>Hiring Timeline *</label>
+      <select name="timeline" required>
+        <option value="">Select</option>
+        <option value="Immediate">Immediate</option>
+        <option value="Within 7 days">Within 7 days</option>
+        <option value="Within 15 days">Within 15 days</option>
+        <option value="Flexible">Flexible</option>
+      </select>
+
+      <label>Notes</label>
+      <textarea name="notes" rows="4" placeholder="Any additional details"></textarea>
+
+      <button type="submit">Submit Requirement</button>
+
+      <p id="formMessage"></p>
+
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
