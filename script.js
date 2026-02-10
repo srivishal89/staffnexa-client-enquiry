@@ -37,7 +37,8 @@ form.addEventListener("submit", async (e) => {
 
     if (response.ok) {
       messageEl.style.color = "green";
-      messageEl.textContent = "Thank you! Your requirement has been submitted.";
+      messageEl.textContent =
+        "Thank you! Your requirement has been submitted.";
       form.reset();
       genderField.style.display = "none";
     } else {
@@ -45,6 +46,7 @@ form.addEventListener("submit", async (e) => {
     }
   } catch (error) {
     messageEl.style.color = "red";
-    messageEl.textContent = "Submission failed. Please try again.";
+    messageEl.textContent =
+      "Submission failed. Please try again.";
   }
 });
