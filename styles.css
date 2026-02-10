@@ -10,17 +10,19 @@ body {
 }
 
 .page {
-  max-width: 960px;
+  max-width: 1000px;
   margin: 40px auto;
   background: #ffffff;
-  padding: 30px 40px;
+  padding: 35px 45px;
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
+
+/* LOGO */
 .logo-wrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .logo-wrapper img {
@@ -41,10 +43,11 @@ h1 {
   font-size: 14px;
 }
 
+/* FORM GRID */
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px 30px;
+  gap: 22px 32px;
 }
 
 .field {
@@ -65,7 +68,7 @@ label {
 input,
 select,
 textarea {
-  padding: 10px;
+  padding: 11px;
   font-size: 14px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -87,10 +90,10 @@ textarea {
 }
 
 button {
-  padding: 12px 30px;
+  padding: 12px 34px;
   font-size: 16px;
   background: #0a4dbf;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -105,15 +108,11 @@ button:hover {
   font-weight: bold;
 }
 
-/* ✅ MOBILE RESPONSIVE */
+/* ✅ MOBILE VIEW */
 @media (max-width: 768px) {
   .page {
     margin: 20px;
     padding: 25px;
-  }
-@media (min-width: 769px) {
-  .logo-wrapper {
-    justify-content: flex-start;
   }
 
   .form-grid {
@@ -122,5 +121,12 @@ button:hover {
 
   .field.full {
     grid-column: span 1;
+  }
+}
+
+/* ✅ DESKTOP LOGO ALIGNMENT */
+@media (min-width: 769px) {
+  .logo-wrapper {
+    justify-content: flex-start;
   }
 }
