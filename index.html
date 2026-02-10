@@ -8,48 +8,85 @@
 </head>
 <body>
 
-  <div class="container">
+  <div class="page">
     <h1>Hire Staff</h1>
-    <p class="subtitle">Tell us your manpower requirement and we’ll get back to you.</p>
+    <p class="subtitle">
+      Share your manpower requirement and our team will contact you shortly.
+    </p>
 
-    <form id="clientEnquiryForm">
+    <form id="clientEnquiryForm" class="form-grid">
 
-      <label>Company Name *</label>
-      <input type="text" name="companyName" required />
+      <div class="field">
+        <label>Company Name *</label>
+        <input type="text" name="companyName" required />
+      </div>
 
-      <label>Contact Person *</label>
-      <input type="text" name="contactPerson" required />
+      <div class="field">
+        <label>Contact Person *</label>
+        <input type="text" name="contactPerson" required />
+      </div>
 
-      <label>Phone Number *</label>
-      <input type="tel" name="phone" required pattern="[0-9]{10}" />
+      <div class="field">
+        <label>Phone Number *</label>
+        <input type="tel" name="phone" pattern="[0-9]{10}" required />
+      </div>
 
-      <label>Email *</label>
-      <input type="email" name="email" required />
+      <div class="field">
+        <label>Email *</label>
+        <input type="email" name="email" required />
+      </div>
 
-      <label>Requirement Type *</label>
-      <input type="text" name="requirementType" placeholder="e.g. Housekeeping, Security" required />
+      <div class="field">
+        <label>Requirement Type *</label>
+        <select name="requirementType" id="requirementType" required>
+          <option value="">Select</option>
+          <option value="Housekeeping">Housekeeping</option>
+          <option value="Security">Security</option>
+          <option value="Helper">Helper</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
 
-      <label>Number of Staff *</label>
-      <input type="number" name="numberOfStaff" required min="1" />
+      <div class="field" id="genderField" style="display:none;">
+        <label>Gender Preference *</label>
+        <select name="genderPreference">
+          <option value="">Select</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Any">Any</option>
+        </select>
+      </div>
 
-      <label>Location *</label>
-      <input type="text" name="location" required />
+      <div class="field">
+        <label>Number of Staff *</label>
+        <input type="number" name="numberOfStaff" min="1" required />
+      </div>
 
-      <label>Hiring Timeline *</label>
-      <select name="timeline" required>
-        <option value="">Select</option>
-        <option value="Immediate">Immediate</option>
-        <option value="Within 7 days">Within 7 days</option>
-        <option value="Within 15 days">Within 15 days</option>
-        <option value="Flexible">Flexible</option>
-      </select>
+      <div class="field">
+        <label>Location *</label>
+        <input type="text" name="location" required />
+      </div>
 
-      <label>Notes</label>
-      <textarea name="notes" rows="4" placeholder="Any additional details"></textarea>
+      <div class="field">
+        <label>Hiring Timeline *</label>
+        <select name="timeline" required>
+          <option value="">Select</option>
+          <option value="Immediate">Immediate</option>
+          <option value="Within 7 days">Within 7 days</option>
+          <option value="Within 15 days">Within 15 days</option>
+          <option value="Flexible">Flexible</option>
+        </select>
+      </div>
 
-      <button type="submit">Submit Requirement</button>
+      <div class="field full">
+        <label>Notes</label>
+        <textarea name="notes" rows="4" placeholder="Any additional details"></textarea>
+      </div>
 
-      <p id="formMessage"></p>
+      <div class="actions full">
+        <button type="submit">Submit Requirement</button>
+        <p id="formMessage"></p>
+      </div>
 
     </form>
   </div>
