@@ -17,6 +17,16 @@ body {
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.logo-wrapper img {
+  max-height: 55px;
+  width: auto;
+}
 
 h1 {
   margin-top: 0;
@@ -100,6 +110,10 @@ button:hover {
   .page {
     margin: 20px;
     padding: 25px;
+  }
+@media (min-width: 769px) {
+  .logo-wrapper {
+    justify-content: flex-start;
   }
 
   .form-grid {
