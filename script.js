@@ -7,7 +7,7 @@ const otherRoleInput = document.getElementById("otherRole");
 const phoneInput = document.getElementById("phone");
 
 // Change when deployed
-const API_URL = "http://localhost:3000/client-enquiries";
+const API_URL = "https://staffnexa-backend.onrender.com/client-enquiries";
 
 /* PHONE VALIDATION */
 phoneInput.addEventListener("input", () => {
