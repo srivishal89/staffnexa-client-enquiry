@@ -37,7 +37,13 @@
 
       <div class="field">
         <label>Phone Number *</label>
-        <input type="tel" name="phone" pattern="[0-9]{10}" required />
+        <input 
+          type="tel" 
+          name="phone" 
+          id="phone"
+          maxlength="10"
+          required 
+        />
       </div>
 
       <div class="field">
@@ -50,10 +56,16 @@
         <select name="requirementType" id="requirementType" required>
           <option value="">Select</option>
           <option value="Housekeeping">Housekeeping</option>
-          <option value="Security">Security</option>
-          <option value="Helper">Helper</option>
+          <option value="Pantry">Pantry</option>
+          <option value="Supervisor">Supervisor</option>
+          <option value="Telecaller">Telecaller</option>
           <option value="Other">Other</option>
         </select>
+      </div>
+
+      <div class="field" id="otherRoleField" style="display:none;">
+        <label>Specify Role *</label>
+        <input type="text" name="otherRole" id="otherRole" />
       </div>
 
       <div class="field" id="genderField" style="display:none;">
