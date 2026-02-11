@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8" />
   <title>Hire Staff | Staffnexa</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <div class="page">
 
-    <!-- HEADER -->
     <div class="header">
       <div class="logo-wrapper">
         <img src="logo.png" alt="Staffnexa Logo" />
@@ -23,95 +21,70 @@
       </div>
     </div>
 
-    <form id="clientEnquiryForm" class="form-grid">
+    <form id="clientForm">
 
-      <div class="field">
-        <label>Company Name *</label>
-        <input type="text" name="companyName" required />
-      </div>
+      <div class="form-grid">
 
-      <div class="field">
-        <label>Contact Person *</label>
-        <input type="text" name="contactPerson" required />
-      </div>
+        <div class="field">
+          <label>Company Name *</label>
+          <input type="text" id="companyName" required />
+        </div>
 
-      <div class="field">
-        <label>Phone Number *</label>
-        <input 
-          type="tel" 
-          name="phone" 
-          id="phone"
-          maxlength="10"
-          required 
-        />
-      </div>
+        <div class="field">
+          <label>Contact Person *</label>
+          <input type="text" id="contactPerson" required />
+        </div>
 
-      <div class="field">
-        <label>Email *</label>
-        <input type="email" name="email" required />
-      </div>
+        <div class="field">
+          <label>Phone Number *</label>
+          <input type="text" id="phone" maxlength="10" required />
+        </div>
 
-      <div class="field">
-        <label>Requirement Type *</label>
-        <select name="requirementType" id="requirementType" required>
-          <option value="">Select</option>
-          <option value="Housekeeping">Housekeeping</option>
-          <option value="Pantry">Pantry</option>
-          <option value="Supervisor">Supervisor</option>
-          <option value="Telecaller">Telecaller</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
+        <div class="field">
+          <label>Email *</label>
+          <input type="email" id="email" required />
+        </div>
 
-      <div class="field" id="otherRoleField" style="display:none;">
-        <label>Specify Role *</label>
-        <input type="text" name="otherRole" id="otherRole" />
-      </div>
+        <div class="field">
+          <label>Requirement Type *</label>
+          <select id="requirementType" required>
+            <option value="">Select</option>
+            <option>Housekeeping</option>
+            <option>Pantry</option>
+            <option>Supervisor</option>
+            <option>Telecaller</option>
+            <option>Other</option>
+          </select>
+        </div>
 
-      <div class="field" id="genderField" style="display:none;">
-        <label>Gender Preference *</label>
-        <select name="genderPreference">
-          <option value="">Select</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-          <option value="Any">Any</option>
-        </select>
-      </div>
+        <div class="field">
+          <label>Gender Preference *</label>
+          <select id="genderPreference" required>
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Any</option>
+          </select>
+        </div>
 
-      <div class="field">
-        <label>Number of Staff *</label>
-        <input type="number" name="numberOfStaff" min="1" required />
-      </div>
+        <div class="field" id="otherRoleWrapper" style="display:none;">
+          <label>Specify Role *</label>
+          <input type="text" id="otherRole" />
+        </div>
 
-      <div class="field">
-        <label>Location *</label>
-        <input type="text" name="location" required />
-      </div>
+        <div class="field">
+          <label>Number of Staff *</label>
+          <input type="number" id="numberOfStaff" required />
+        </div>
 
-      <div class="field">
-        <label>Hiring Timeline *</label>
-        <select name="timeline" required>
-          <option value="">Select</option>
-          <option value="Immediate">Immediate</option>
-          <option value="Within 7 days">Within 7 days</option>
-          <option value="Within 15 days">Within 15 days</option>
-          <option value="Flexible">Flexible</option>
-        </select>
-      </div>
+        <div class="field">
+          <label>Location *</label>
+          <input type="text" id="location" required />
+        </div>
 
-      <div class="field full">
-        <label>Notes</label>
-        <textarea name="notes" rows="4" placeholder="Any additional details"></textarea>
-      </div>
-
-      <div class="actions full">
-        <button type="submit">Submit Requirement</button>
-        <p id="formMessage"></p>
-      </div>
-
-    </form>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+        <div class="field">
+          <label>Hiring Timeline *</label>
+          <select id="hiringTimeline" required>
+            <option value="">Select</option>
+            <option>Immediate</option>
+            <option>Within 7 days</op
