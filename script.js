@@ -22,7 +22,7 @@ form.addEventListener("submit", async function (e) {
     genderPreference: document.getElementById("genderPreference").value,
     numberOfStaff: parseInt(document.getElementById("numberOfStaff").value),
     location: document.getElementById("location").value.trim(),
-    hiringTimeline: document.getElementById("hiringTimeline").value,
+    timeline: document.getElementById("hiringTimeline").value,
     notes: document.getElementById("notes").value.trim()
   };
 
