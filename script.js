@@ -52,7 +52,6 @@ form.addEventListener("submit", async function (e) {
   }
 });
 
-/* Show textbox when Other selected */
 requirementType.addEventListener("change", function () {
   if (this.value === "Other") {
     otherRoleWrapper.style.display = "block";
