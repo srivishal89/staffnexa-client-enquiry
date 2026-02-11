@@ -42,7 +42,7 @@ body {
   font-size: 14px;
 }
 
-/* FORM */
+/* FORM GRID */
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -85,25 +85,24 @@ textarea {
   resize: vertical;
 }
 
-/* SUBMIT BUTTON FIX */
+/* 🔥 FIXED SUBMIT SECTION */
 .actions {
-  grid-column: span 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  grid-column: 1 / -1;   /* spans entire grid width */
+  display: block;
+  margin-top: 20px;
   text-align: center;
 }
 
 button {
-  padding: 14px 40px;
+  display: inline-block;
+  padding: 14px 45px;
   font-size: 16px;
   background: #0a4dbf;
   color: #fff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  min-width: 240px;
+  min-width: 260px;
 }
 
 button:hover {
@@ -135,4 +134,7 @@ button:hover {
     grid-column: span 1;
   }
 
-  .actions
+  .actions {
+    grid-column: span 1;
+  }
+}
