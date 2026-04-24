@@ -1,138 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hire Staff | Staffnexa Premium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --bg-light: #f8fafc;
+      --glass-white: rgba(255, 255, 255, 0.7);
+      --border-color: #e2e8f0;
+    }
 
-<!-- ✅ FIXED favicon path -->
-<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hire Staff | Staffnexa Premium</title>
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    /* --- HEADER & LOGO --- */
+    header {
+      padding: 30px 20px 10px;
+      text-align: center;
+    }
 
-<style>
-:root {
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
-  --text-main: #1e293b;
-  --text-muted: #64748b;
-  --bg-light: #f8fafc;
-  --glass-white: rgba(255, 255, 255, 0.65); /* ✅ improved transparency */
-  --border-color: #e2e8f0;
-}
+    .logo {
+      height: 45px; /* Scaled for better alignment */
+      width: auto;
+    }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+    /* --- HERO SECTION --- */
+    .hero {
+      padding: 20px 20px; /* Reduced padding to save vertical space */
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-body {
-  font-family: 'Inter', -apple-system, sans-serif;
-  background-color: var(--bg-light);
-  color: var(--text-main);
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
+    .hero h1 {
+      font-size: clamp(1.8rem, 4vw, 3rem); /* Slightly smaller for better fit */
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #0f172a;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
 
-/* ✅ LOGO FIX */
-.logo {
-  height: 42px;
-  object-fit: contain;
-}
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
 
-/* --- HERO SECTION (COMPACT FIX) --- */
-.hero {
-  padding: 20px 20px 10px;
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
-}
+    .trust-line {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 12px;
+    }
 
-.hero h1 {
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: #0f172a;
-  margin-bottom: 10px;
-}
+    /* --- TRUST BAR --- */
+    .trust-bar {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
 
-.hero p {
-  font-size: 1rem;
-  color: var(--text-muted);
-  max-width: 650px;
-  margin: 0 auto 12px;
-}
+    .trust-point {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #475569;
+    }
 
-.trust-line {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--primary);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 10px;
-}
+    .icon-dot { width: 6px; height: 6px; background: var(--primary); border-radius: 50%; }
 
-/* --- TRUST BAR --- */
-.trust-bar {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
+    /* --- FORM SECTION --- */
+    .form-section {
+      position: relative;
+      padding: 0 20px;
+    }
 
-.trust-point {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 600;
-  color: #475569;
-}
+    .blob {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      background: #dbeafe;
+      filter: blur(80px);
+      z-index: -1;
+      border-radius: 50%;
+    }
 
-.icon-dot {
-  width: 8px;
-  height: 8px;
-  background: var(--primary);
-  border-radius: 50%;
-}
+    .form-wrapper {
+      max-width: 800px;
+      margin: 0 auto 60px;
+      background: var(--glass-white);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 24px;
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
+      padding: 40px;
+    }
 
-/* --- FORM SECTION (LESS HEIGHT + CLEAN) --- */
-.form-section {
-  margin-top: -20px;
-}
+    .form-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-align: center;
+    }
 
-/* ✅ soften background blobs */
-.blob {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: #dbeafe;
-  filter: blur(80px);
-  z-index: -1;
-  border-radius: 50%;
-  opacity: 0.4; /* ✅ reduced intensity */
-}
+    .form-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 32px;
+    }
 
-/* --- FORM CARD --- */
-.form-wrapper {
-  max-width: 800px;
-  margin: 0 auto;
-  background: var(--glass-white);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 24px;
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
-  padding: 48px;
-}
-</style>
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      text-align: left; /* Ensures labels align to input starts */
+    }
 
+    .field { display: flex; flex-direction: column; gap: 8px; }
+    .field.full { grid-column: span 2; }
+    .field.hidden { display: none; }
+
+    label { font-size: 0.85rem; font-weight: 600; color: #334155; }
+
+    input, select, textarea {
+      padding: 12px 16px;
+      border: 1.5px solid var(--border-color);
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: inherit;
+      background: #ffffff;
+      width: 100%;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+    }
+
+    /* --- ACTIONS --- */
+    .actions { margin-top: 12px; text-align: center; grid-column: span 2; }
+
+    button[type="submit"] {
+      width: 100%;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 16px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    button[type="submit"]:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    .security-note {
+      margin-top: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .whatsapp-cta {
+      margin-top: 20px;
+      display: inline-block;
+      color: #059669;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    /* --- HOW IT WORKS --- */
+    .how-it-works {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .section-label {
+      text-align: center;
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 40px;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .step h4 { margin-bottom: 8px; font-size: 1rem; }
+    .step p { color: var(--text-muted); font-size: 0.875rem; }
+
+    @media (max-width: 768px) {
+      .form-grid, .steps-grid { grid-template-columns: 1fr; }
+      .field.full, .actions { grid-column: span 1; }
+      .form-wrapper { padding: 30px 20px; }
+      .hero h1 { font-size: 1.75rem; }
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- ✅ FIXED HEADER + LOGO -->
-<header style="text-align:center; padding:8px;">
-  <img src="logo.png" class="logo" />
-</header>
+  <header>
+    <img src="logo.png" alt="Staffnexa Logo" class="logo" />
+  </header>
 
   <section class="hero">
     <div class="trust-line">Trusted by growing businesses across India</div>
@@ -140,21 +246,19 @@ body {
     <p>Get job-ready candidates matched to your requirement — fast, reliable, and hassle-free.</p>
     
     <div class="trust-bar">
-      <div class="trust-point"><span class="icon-dot"></span> ⚡ 24–48 Hour Delivery</div>
-      <div class="trust-point"><span class="icon-dot"></span> 🎯 Pre-Screened Candidates</div>
-      <div class="trust-point"><span class="icon-dot"></span> 💼 Dedicated Recruiter</div>
+      <div class="trust-point"><span class="icon-dot"></span> ⚡ 24–48hr Delivery</div>
+      <div class="trust-point"><span class="icon-dot"></span> 🎯 Pre-Screened</div>
+      <div class="trust-point"><span class="icon-dot"></span> 💼 Dedicated Support</div>
     </div>
   </section>
 
   <section class="form-section">
-    <div class="blob" style="top: -50px; left: 10%;"></div>
-    <div class="blob" style="bottom: -50px; right: 10%; background: #ede9fe;"></div>
+    <div class="blob" style="top: -40px; left: 15%;"></div>
+    <div class="blob" style="bottom: 20px; right: 15%; background: #ede9fe;"></div>
 
     <div class="form-wrapper">
       <h3 class="form-title">Tell us your requirement</h3>
-<p style="text-align:center; color:#64748b; margin-bottom:20px;">
-Takes less than 1 minute to complete
-</p>
+      <p class="form-subtitle">Takes less than 1 minute to complete</p>
       
       <form id="clientForm">
         <div class="form-grid">
@@ -170,7 +274,7 @@ Takes less than 1 minute to complete
 
           <div class="field">
             <label for="phone">Phone Number *</label>
-            <input type="tel" id="phone" inputmode="numeric" pattern="[0-9]{10}" placeholder="10-digit mobile number" required />
+            <input type="tel" id="phone" inputmode="numeric" pattern="[0-9]{10}" placeholder="10-digit mobile" required />
           </div>
 
           <div class="field">
@@ -188,20 +292,6 @@ Takes less than 1 minute to complete
               <option>Telecaller</option>
               <option>Other</option>
             </select>
-          </div>
-
-          <div class="field hidden">
-            <label for="genderPreference">Gender Preference *</label>
-            <select id="genderPreference">
-              <option value="Any" selected>Any</option>
-              <option>Male</option>
-              <option>Female</option>
-            </select>
-          </div>
-
-          <div class="field" id="otherRoleWrapper" style="display:none;">
-            <label for="otherRole">Specify Role *</label>
-            <input type="text" id="otherRole" placeholder="What role are you looking for?" />
           </div>
 
           <div class="field">
@@ -227,19 +317,13 @@ Takes less than 1 minute to complete
 
           <div class="field full">
             <label for="notes">Additional Notes</label>
-            <textarea id="notes" rows="3" placeholder="Share any specific skills or preferences..."></textarea>
+            <textarea id="notes" rows="3" placeholder="Any specific skills or preferences..."></textarea>
           </div>
 
           <div class="actions">
             <button type="submit" id="submitBtn">Get Candidates Now →</button>
-            
-            <div class="security-note">
-              <span>🔒 Your information is secure. We’ll contact you within 24 hours.</span>
-            </div>
-
-            <a href="https://wa.me/917011160905" target="_blank" class="whatsapp-cta">
-Need urgent hiring? Chat on WhatsApp →
-</a>
+            <div class="security-note">🔒 Your information is secure. We’ll contact you within 24 hours.</div>
+            <a href="https://wa.me/917011160905" target="_blank" class="whatsapp-cta">Need urgent hiring? Chat on WhatsApp →</a>
             <div id="formMessage"></div>
           </div>
         </div>
@@ -248,22 +332,19 @@ Need urgent hiring? Chat on WhatsApp →
   </section>
 
   <section class="how-it-works">
-    <h3 class="section-label">HOW IT WORKS</h3>
+    <h3 class="section-label">Process</h3>
     <div class="steps-grid">
       <div class="step">
-        <div class="step-icon">1</div>
-        <h4>Submit requirement</h4>
-        <p>Tell us about the role, location, and number of staff you need.</p>
+        <h4>1. Requirement</h4>
+        <p>Tell us about the role, location, and staff count.</p>
       </div>
       <div class="step">
-        <div class="step-icon">2</div>
-        <h4>We shortlist candidates</h4>
-        <p>Our AI-powered engine matches pre-screened talent to your brief.</p>
+        <h4>2. Shortlisting</h4>
+        <p>We match pre-screened talent to your specific brief.</p>
       </div>
       <div class="step">
-        <div class="step-icon">3</div>
-        <h4>You interview & hire</h4>
-        <p>Interview the best candidates and onboard them immediately.</p>
+        <h4>3. Onboarding</h4>
+        <p>Interview the best candidates and hire immediately.</p>
       </div>
     </div>
   </section>
