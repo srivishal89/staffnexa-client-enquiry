@@ -1,237 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hire Staff | Staffnexa Premium</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #2563eb;
-      --primary-hover: #1d4ed8;
-      --text-main: #1e293b;
-      --text-muted: #64748b;
-      --bg-light: #f8fafc;
-      --glass-white: rgba(255, 255, 255, 0.7);
-      --border-color: #e2e8f0;
-    }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+<!-- ✅ FIXED favicon path -->
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
 
-    body {
-      font-family: 'Inter', -apple-system, sans-serif;
-      background-color: var(--bg-light);
-      color: var(--text-main);
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hire Staff | Staffnexa Premium</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    /* --- HERO SECTION --- */
-    .hero {
-      padding: 40px 20px 20px;
-      text-align: center;
-      max-width: 900px;
-      margin: 0 auto;
-    }
+<style>
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --bg-light: #f8fafc;
+  --glass-white: rgba(255, 255, 255, 0.65); /* ✅ improved transparency */
+  --border-color: #e2e8f0;
+}
 
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      color: #0f172a;
-      margin-bottom: 10px;
-    }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-    .hero p {
-      font-size: 1.25rem;
-      color: var(--text-muted);
-      max-width: 650px;
-      margin: 0 auto 20px;
-    }
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
 
-    .trust-line {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--primary);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 20px;
-    }
+/* ✅ LOGO FIX */
+.logo {
+  height: 42px;
+  object-fit: contain;
+}
 
-    /* --- TRUST BAR --- */
-    .trust-bar {
-      display: flex;
-      justify-content: center;
-      gap: 32px;
-      margin-bottom: 30px;
-      flex-wrap: wrap;
-    }
+/* --- HERO SECTION (COMPACT FIX) --- */
+.hero {
+  padding: 20px 20px 10px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-    .trust-point {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 600;
-      color: #475569;
-    }
+.hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
 
-    .icon-dot { width: 8px; height: 8px; background: var(--primary); border-radius: 50%; }
+.hero p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 650px;
+  margin: 0 auto 12px;
+}
 
-    /* --- FORM CARD (LIQUID GLASS) --- */
-   .form-section {
+.trust-line {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+/* --- TRUST BAR --- */
+.trust-bar {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.trust-point {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.icon-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+/* --- FORM SECTION (LESS HEIGHT + CLEAN) --- */
+.form-section {
   margin-top: -20px;
 }
 
-    /* Decorative background blobs for glass effect */
-    .blob {
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      background: #dbeafe;
-      filter: blur(80px);
-      z-index: -1;
-      border-radius: 50%;
-    }
+/* ✅ soften background blobs */
+.blob {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #dbeafe;
+  filter: blur(80px);
+  z-index: -1;
+  border-radius: 50%;
+  opacity: 0.4; /* ✅ reduced intensity */
+}
 
-    .form-wrapper {
-      max-width: 800px;
-      margin: 0 auto;
-      background: var(--glass-white);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      border-radius: 24px;
-      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
-      padding: 48px;
-    }
+/* --- FORM CARD --- */
+.form-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--glass-white);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 24px;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
+  padding: 48px;
+}
+</style>
 
-    .form-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 32px;
-      text-align: center;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    .field { display: flex; flex-direction: column; gap: 8px; }
-    .field.full { grid-column: span 2; }
-    .field.hidden { display: none; } /* Gender field hidden per instructions */
-
-    label { font-size: 0.875rem; font-weight: 600; color: #334155; }
-
-    input, select, textarea {
-      padding: 12px 16px;
-      border: 1.5px solid var(--border-color);
-      border-radius: 10px;
-      font-size: 1rem;
-      font-family: inherit;
-      transition: all 0.2s ease;
-      background: #ffffff;
-    }
-
-    input:focus, select:focus, textarea:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
-    }
-
-    /* --- CTA BUTTON --- */
-    .actions { margin-top: 32px; text-align: center; }
-
-    button[type="submit"] {
-      width: 100%;
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 16px 32px;
-      font-size: 1.125rem;
-      font-weight: 700;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
-    }
-
-    button[type="submit"]:hover {
-      background: var(--primary-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
-    }
-
-    button[type="submit"]:active { transform: translateY(0); }
-
-    .security-note {
-      margin-top: 16px;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 4px;
-    }
-
-    .whatsapp-cta {
-      margin-top: 24px;
-      display: inline-block;
-      color: #059669;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    /* --- HOW IT WORKS --- */
-    .how-it-works {
-      padding: 100px 20px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .section-label {
-      text-align: center;
-      color: var(--primary);
-      font-weight: 700;
-      margin-bottom: 48px;
-    }
-
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-    }
-
-    .step { text-align: left; }
-    .step-icon {
-      width: 48px; height: 48px;
-      background: #eff6ff;
-      color: var(--primary);
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 800;
-      margin-bottom: 20px;
-    }
-
-    .step h4 { margin-bottom: 12px; font-size: 1.125rem; }
-    .step p { color: var(--text-muted); font-size: 0.95rem; }
-
-    @media (max-width: 768px) {
-      .form-grid, .steps-grid { grid-template-columns: 1fr; }
-      .field.full { grid-column: span 1; }
-      .form-wrapper { padding: 32px 20px; }
-    }
-  </style>
 </head>
+
 <body>
-<header style="text-align:center; padding:10px;">
-  <img src="https://hire.staffnexats.com/logo.png" 
-       style="height:50px;" />
+
+<!-- ✅ FIXED HEADER + LOGO -->
+<header style="text-align:center; padding:8px;">
+  <img src="logo.png" class="logo" />
 </header>
 
   <section class="hero">
